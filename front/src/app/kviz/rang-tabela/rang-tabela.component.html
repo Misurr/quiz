@@ -1,0 +1,47 @@
+<div class="table-container">
+	<div class="table-header">
+		<div class="back-container">
+			<h1 class="rank-header">Tisa</h1>
+			<button class="back-button" [routerLink]="['/kviz-postavke']"><i
+					class="fa-solid fa-caret-left back-icon"></i>Nazad</button>
+		</div>
+
+		<p class="rank-cup"><i class="fa-solid fa-trophy cup-icon rank-cup-icon"></i></p>
+		<div class="more-rank-icons">
+			<button class="mode-rank" (click)="onModeSubmit(1)">
+				<i class="fa-regular fa-star mode-icon icon-mode-rank"
+					[ngClass]="{ selected: selectedMode === 1 }"></i></button>
+			<button class="mode-rank " (click)="onModeSubmit(2)">
+				<i class="fa-solid fa-star-half-stroke mode-icon icon-mode-rank"
+					[ngClass]="{ selected: selectedMode === 2 }"></i></button>
+			<button class="mode-rank " (click)="onModeSubmit(3)">
+				<i class="fa-solid fa-star mode-icon icon-mode-rank"
+					[ngClass]="{ selected: selectedMode === 3 }"></i></button>
+		</div>
+
+		<div class="columns-container">
+			<div class="rank-column rank-position">P</div>
+			<div class="rank-column rank-name">Ime</div>
+			<div class="rank-column rank-points">Bodovi</div>
+			<div class="rank-column rank-time">Vrijeme</div>
+		</div>
+		<div class="dropdown-container dropdown-rank-table">
+			<button class="area-header area-header-table">
+				{{ selectedType ? selectedType.name : "Odaberite tip pitanja" }}
+				<i class="fa-solid fa-caret-down arrow-icon arrow-icon-table"></i>
+			</button>
+			<div class=" dropdown-table">
+				<a *ngFor="let type of questionTypes" (click)="onQuestionTypeClick(type)">{{ type.name }}</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="rank-table-container">
+		<div class="user-container" *ngFor="let user of users; index as i">
+			<div class="rank-position rank-position-content">{{i + 1 + '. '}}</div>
+			<div class="rank-name rank-name-content">{{user.ime}}</div>
+			<div class="rank-points rank-points-content">{{user.brojBodova}}</div>
+			<div class="rank-time rank-time-content">{{user.vrijeme}}</div>
+		</div>
+	</div>
+</div>

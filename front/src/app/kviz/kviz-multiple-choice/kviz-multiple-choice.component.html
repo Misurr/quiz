@@ -1,0 +1,58 @@
+<div class="single-choice-container">
+	<button class="timer-button">
+		<p class="stain-text timer">{{ formatTime(minutes) }}:{{ formatTime(seconds) }}</p>
+	</button>
+
+	<div class="text-container">
+		<p class="question-number">{{index + "."}}</p>
+		<p class="question-text">{{currentQuestion.tekstPitanja}}</p>
+	</div>
+
+	<div class="sc-question-box">
+		<div class="multiple-choice-container">
+			<p class="multiple-choice-text">Više tačnih odgovora!</p>
+
+			<div class="sc-answers-container">
+
+				<button class="sc-answer-btn sc-answer-btn-top-m" (click)="onSubmit(1)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(1), 'correct-answer': answered && selectedCorrectAnswers.includes(1) && currentQuestion.tacanOdgovor.includes(1)}"
+					[disabled]="selectedCorrectAnswers.includes(1) || wrongAnswers.includes(1)">
+					{{currentQuestion.odgovor1}}</button>
+
+				<button class="sc-answer-btn sc-answer-btn-top-m" (click)="onSubmit(2)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(2), 'correct-answer': answered && selectedCorrectAnswers.includes(2) &&  currentQuestion.tacanOdgovor.includes(2)}"
+					[disabled]="selectedCorrectAnswers.includes(2) || wrongAnswers.includes(2)">
+					{{currentQuestion.odgovor2}}</button>
+
+				<button class="sc-answer-btn sc-answer-btn-bottom-m" (click)="onSubmit(3)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(3), 'correct-answer': answered && selectedCorrectAnswers.includes(3) &&  currentQuestion.tacanOdgovor.includes(3)}"
+					[disabled]="selectedCorrectAnswers.includes(3) || wrongAnswers.includes(3)">
+					{{currentQuestion.odgovor3}}</button>
+
+				<button class="sc-answer-btn sc-answer-btn-bottom-m" (click)="onSubmit(4)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(4), 'correct-answer': answered && selectedCorrectAnswers.includes(4) && currentQuestion.tacanOdgovor.includes(4)}"
+					[disabled]="selectedCorrectAnswers.includes(4) || wrongAnswers.includes(4)">
+					{{currentQuestion.odgovor4}}</button>
+
+				<button class="sc-answer-btn sc-answer-btn-bottom-mm" (click)="onSubmit(5)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(5), 'correct-answer': answered && selectedCorrectAnswers.includes(5) &&  currentQuestion.tacanOdgovor.includes(5)}"
+					[disabled]="selectedCorrectAnswers.includes(5) || wrongAnswers.includes(5)">
+					{{currentQuestion.odgovor5}}</button>
+
+				<button class="sc-answer-btn sc-answer-btn-bottom-mm" (click)="onSubmit(6)"
+					[ngClass]="{'wrong-answer': answered && wrongAnswers.includes(6), 'correct-answer': answered && selectedCorrectAnswers.includes(6) && currentQuestion.tacanOdgovor.includes(6)}"
+					[disabled]="selectedCorrectAnswers.includes(6) || wrongAnswers.includes(6)">
+					{{currentQuestion.odgovor6}}</button>
+			</div>
+		</div>
+
+		<div class="question-image-container">
+			<img class="question-image" src="{{ currentQuestion.slika }}" />
+		</div>
+
+	</div>
+
+	<div class="points-container">
+		<p class="points-text">{{ bodovi }}</p>
+	</div>
+</div>

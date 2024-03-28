@@ -1,0 +1,31 @@
+<app-header></app-header>
+<form [formGroup]="areaForm" (ngSubmit)="onSubmit()" class="full-screen-form">
+    <div>
+      <label for="name">Naziv:</label>
+      <input type="text" id="title" formControlName="naziv" placeholder="Unesite naziv oblasti"/>
+    </div>
+  
+    <div>
+      <label for="caption">Opis oblasti:</label>
+      <textarea id="caption" formControlName="opis" placeholder="Unesite opis oblasti"  rows="4" cols="50"></textarea>
+    </div>
+    <div class="image-container">
+      <div class="image-input">
+        <label for="imageUrl">Unesite URL slike:</label>
+        <input type="text" id="imageUrl" [(ngModel)]="imageUrl" placeholder="Unesite URL slike:"
+          formControlName="slika">
+      </div>
+      <div *ngIf="imageUrl" class="image">
+        <img src={{imageUrl}} alt="Prikazana slika" />
+      </div>
+    </div>
+    <div>
+      <label for="active" style="display: inline-block; margin-right: 10px;">Aktivna oblast:</label>
+      <input type="checkbox" id="active" formControlName="aktivno" />
+    </div>
+    
+  
+    <button type="submit" [disabled]="!areaForm.valid">Sačuvaj</button>
+  </form>
+
+  

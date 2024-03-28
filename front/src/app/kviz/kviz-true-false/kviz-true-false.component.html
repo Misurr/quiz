@@ -1,0 +1,43 @@
+<div class="single-choice-container">
+	<button class="timer-button">
+		<p class="stain-text timer"> {{ formatTime(minutes) }}:{{ formatTime(seconds) }}</p>
+	</button>
+	<div class="text-container">
+		<p class="question-number">{{ index + "." }}</p>
+		<p class="question-text">{{ currentQuestion.question }}</p>
+	</div>
+	<div class="sc-question-box">
+		<div class="sc-answers-container">
+			<button class="sc-answer-btn sc-answer-btn-top true-false-answer" (click)="onSubmit(1)" [ngClass]="{
+          'wrong-answer':
+            answered &&
+            selectedAnswer === 1 &&
+            this.currentQuestion.correctAnswer === 0,
+          'correct-answer':
+            answered &&
+            selectedAnswer === 1 &&
+            this.currentQuestion.correctAnswer === 1
+        }" [disabled]="answered">
+				Tačno
+			</button>
+			<button class="sc-answer-btn sc-answer-btn-top true-false-answer" (click)="onSubmit(2)" [ngClass]="{
+          'wrong-answer':
+            answered &&
+            selectedAnswer === 2 &&
+            this.currentQuestion.correctAnswer === 1,
+          'correct-answer':
+            answered &&
+            selectedAnswer === 2 &&
+            this.currentQuestion.correctAnswer === 0
+        }" [disabled]="answered">
+				Netačno
+			</button>
+		</div>
+		<div class="question-image-container">
+			<img class="question-image" src="{{ currentQuestion.image }}" />
+		</div>
+	</div>
+	<div class="points-container">
+		<p class="points-text">{{ bodovi }}</p>
+	</div>
+</div>

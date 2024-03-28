@@ -1,0 +1,76 @@
+<!-- Single Choice Pitanja -->
+<div class="single-choice-container">
+  <button class="timer-button">
+    <p class="stain-text timer">
+      {{ formatTime(minutes) }}:{{ formatTime(seconds) }}
+    </p>
+  </button>
+  <div class="text-container">
+    <p class="question-number">{{ index + " ." }}</p>
+    <p class="question-text">{{ currentQuestion.tekstPitanja }}</p>
+  </div>
+
+  <div class="sc-question-box">
+    <div class="sc-answers-container">
+      <button
+        class="sc-answer-btn sc-answer-btn-top"
+        (click)="onSubmit(1)"
+        [ngClass]="{
+          'wrong-answer': answered && wrongAnswers.includes(1),
+          'correct-answer':
+            answered &&
+            selectedAnswer === 1 &&
+            selectedAnswer === currentQuestion.tacanOdgovor
+        }"
+      >
+        {{ currentQuestion.odgovor1 }}
+      </button>
+      <button
+        class="sc-answer-btn sc-answer-btn-top"
+        (click)="onSubmit(2)"
+        [ngClass]="{
+          'wrong-answer': answered && wrongAnswers.includes(2),
+          'correct-answer':
+            answered &&
+            selectedAnswer === 2 &&
+            selectedAnswer === currentQuestion.tacanOdgovor
+        }"
+      >
+        {{ currentQuestion.odgovor2 }}
+      </button>
+      <button
+        class="sc-answer-btn sc-answer-btn-bottom"
+        (click)="onSubmit(3)"
+        [ngClass]="{
+          'wrong-answer': answered && wrongAnswers.includes(3),
+          'correct-answer':
+            answered &&
+            selectedAnswer === 3 &&
+            selectedAnswer === currentQuestion.tacanOdgovor
+        }"
+      >
+        {{ currentQuestion.odgovor3 }}
+      </button>
+      <button
+        class="sc-answer-btn sc-answer-btn-bottom"
+        (click)="onSubmit(4)"
+        [ngClass]="{
+          'wrong-answer': answered && wrongAnswers.includes(4),
+          'correct-answer':
+            answered &&
+            selectedAnswer === 4 &&
+            selectedAnswer === currentQuestion.tacanOdgovor
+        }"
+      >
+        {{ currentQuestion.odgovor4 }}
+      </button>
+    </div>
+    <div class="question-image-container">
+      <img class="question-image" src="{{ currentQuestion.slika }}" />
+    </div>
+  </div>
+  <div class="points-container">
+    <p class="points-text">{{ bodovi }}</p>
+  </div>
+</div>
+<div class="line"></div>

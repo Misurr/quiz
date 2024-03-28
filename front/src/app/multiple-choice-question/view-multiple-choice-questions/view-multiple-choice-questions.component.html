@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="container">
+  <header>
+    <h2>Pitanja sa više tačnih odgovora</h2>
+    <button routerLink="/new-multiple-choice" class="add">
+      <i class="icon fas fa-plus"> </i>
+    </button>
+  </header>
+
+  <div *ngFor="let multipleChoice of multipleChoiceArray">
+    <ul>
+      <li>
+        {{ multipleChoice.tekstPitanja }}
+        <div class="icons">
+          <button routerLink="/multiple-choice/{{ multipleChoice.id }}">
+            <i class="icon edit fas fa-edit"></i>
+          </button>
+          <button (click)="deleteMultipleChoice(multipleChoice.id)">
+            <i class="icon delete fas fa-trash"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

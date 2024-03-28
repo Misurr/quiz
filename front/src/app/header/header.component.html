@@ -1,0 +1,21 @@
+<div class="navbar">
+	<div class="dropdown-container">
+		<div class="dropdown">
+			<button class="dropbtn" [routerLink]="['/oblasti']">Početna</button>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Pitanja
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a [routerLink]="['/single-choice']">Single choice pitanja</a>
+				<a [routerLink]="['/multiple-choice']">Multiple Choice pitanja</a>
+				<a [routerLink]="['/view-connecting-questions']">Spajalice</a>
+				<a [routerLink]="['/view-true-false-questions']">True - False</a>
+			</div>
+		</div>
+		<!-- <div class="dropdown" *ngFor="let option of options">
+			<button class="dropbtn" [value]="option.id">{{option.title}} <i class="fa fa-caret-down"></i></button>
+		</div> -->
+	</div>
+</div>

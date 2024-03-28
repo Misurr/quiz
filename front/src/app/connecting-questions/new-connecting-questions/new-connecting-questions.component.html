@@ -1,0 +1,34 @@
+<app-header></app-header>
+<form [formGroup]="connectingQuestions" (ngSubmit)="onSubmit()">
+  <label for="question">Unesite pitanje:</label> <br>
+  <textarea id="question" name="question" formControlName="question" rows="4" cols="50"
+    placeholder="Unesite pitanje..."></textarea>
+
+  <div>
+    <h3>Unesite spajalice</h3>
+  </div>
+
+
+  <div *ngFor="let i of [1, 2, 3, 4, 5]" class="field">
+
+    <input type="text" id="spojkaLijeva" name="pitanje{{i}}" formControlName="spojkaLijeva{{i}}"
+      placeholder="Unesite pitanje">
+
+
+    <input type="text" id="spojkaDesna" name="odgovor{{i}}" formControlName="spojkaDesna{{i}}"
+      placeholder="Unesite odgovor">
+  </div>
+
+  <div class="custom-select">
+    <div><label>Odaberite oblast:</label></div>
+    <div>
+      <select formControlName="select">
+        <!-- <option *ngFor="let oblast of oblasti" [value]="oblast.id"></option> -->
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!connectingQuestions.valid">Pošalji</button>
+  </div>
+</form>

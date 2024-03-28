@@ -1,0 +1,86 @@
+<app-header></app-header>
+<form [formGroup]="singleChoiceForm" (ngSubmit)="onSubmit()">
+
+	<label for="tekstPitanja">Unesite pitanje:</label> <br>
+	<textarea id="tekstPitanja" name="tekstPitanja" formControlName="tekstPitanja" rows="4" cols="50"
+		placeholder="Unesite pitanje..."></textarea>
+
+	<div class="image-container">
+		<div class="image-input">
+			<label for="imageUrl">Unesite URL slike:</label>
+			<input type="text" id="imageUrl" [(ngModel)]="imageUrl" placeholder="Unesite URL slike:"
+				formControlName="slika">
+		</div>
+		<div *ngIf="imageUrl" class="image">
+			<img src={{imageUrl}} alt="Prikazana slika" />
+		</div>
+	</div>
+
+	<div>
+		<h3>Unesite odgovore i pored označite tačan odgovor:</h3>
+	</div>
+
+	<div class="field">
+		<label for="odgovor1"> </label>
+		<input type="text" formControlName="odgovor1" placeholder="Unesite prvi odgovor" id="odgovor1">
+		<input type="radio" formControlName="tacanOdgovor" value="1">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor2"></label>
+		<input type="text" formControlName="odgovor2" placeholder="Unesite drugi odgovor" id="odgovor2">
+		<input type="radio" formControlName="tacanOdgovor" value="2">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor3"></label>
+		<input type="text" formControlName="odgovor3" placeholder="Unesite treći odgovor" id="odgovor3">
+		<input type="radio" formControlName="tacanOdgovor" value="3">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor4"></label>
+		<input type="input" formControlName="odgovor4" placeholder="Unesite četvrti odgovor" id="odgovor4">
+		<input type="radio" formControlName="tacanOdgovor" value="4">
+	</div><br>
+
+	<div class="custom-select">
+		<div><label>Odaberite oblast:</label></div>
+		<div>
+			<select class='select-option' formControlName='areaId'>
+				<option class='option' *ngFor='let option of options' [value]="option.id">{{option.title}}</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="field">
+
+		<label for="mode" class="choose-mode">Odaberite težinu pitanja:</label><br>
+
+		<div class="mode">
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="1"> Lagano
+			</label>
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="2"> Srednje
+			</label>
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="3"> Teško
+			</label>
+		</div>
+	</div>
+
+	<!-- <div *ngIf="singleChoiceForm && singleChoiceForm.get('mode')?.hasError('required')"></div> -->
+
+	<!-- <div *ngIf="singleChoiceForm && singleChoiceForm.get('correctAnswer')?.hasError('required')"></div> -->
+
+	<div>
+		<button type="submit" [disabled]="!singleChoiceForm.valid">Pošalji</button>
+	</div>
+
+</form>
+
+<!-- (ngModelChange)='onOptionsSelected($event)' -->

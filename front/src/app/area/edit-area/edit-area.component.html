@@ -1,0 +1,20 @@
+<app-header></app-header>
+<form [formGroup]="areaFormEdit" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">Naziv:</label>
+      <input type="text" id="title" formControlName="naziv" placeholder="Unesite naziv oblasti" />
+    </div>
+  
+    <div>
+      <label for="caption">Opis oblasti:</label>
+      <textarea id="caption" formControlName="opis" placeholder="Unesite opis oblasti"  rows="4" cols="50"></textarea>
+    </div>
+  
+    <div>
+      <label for="active" style="display: inline-block; margin-right: 10px;">Aktivna oblast:</label>
+      <input type="checkbox" id="aktivno" formControlName="active" />
+    </div>
+    
+  
+    <button type="submit" [disabled]="!areaFormEdit.valid">Sačuvaj</button>
+  </form>

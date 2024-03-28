@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+body {
+  font-family: "Urbanist", sans-serif;
+  /* background-image: url("slika.jpg"); */
+  /* background-size: 100%; */
+  background-color: #dadada;
+  margin: 0;
+  background-color: #e9ecef;
+  /* font-family: "Montserrat", sans-serif; */
+  margin: 0;
+}
+
+

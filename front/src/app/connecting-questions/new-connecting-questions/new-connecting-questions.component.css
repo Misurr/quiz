@@ -1,0 +1,104 @@
+form {
+  background-color: #fff;
+  width: 800px;
+  height: auto;
+  margin: 30px auto;
+  border: 1px solid #bfbfbf;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(42, 42, 43, 0.5);
+  padding: 40px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #eeecef;
+  color: #333;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+#spojkaLijeva {
+  flex: 1;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #eeecef;
+  text-align: center;
+}
+
+#spojkaDesna {
+  flex: 1;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: #eeecef;
+  text-align: center;
+}
+
+.field {
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  background-color: #46b1e7;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #216fc1;
+}
+
+.custom-select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+select {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 50px;
+  background-color: #eeecef;
+  text-align: center;
+}

@@ -1,0 +1,70 @@
+<div class="single-choice-container">
+	<button class="timer-button">
+		<p class="stain-text timer">{{ formatTime(minutes) }}:{{ formatTime(seconds) }}</p>
+	</button>
+
+	<div class="text-container">
+		<p class="question-number">{{index + "."}}</p>
+		<p class="question-text">{{ currentQuestion.question }}</p>
+	</div>
+
+	<div class="sc-question-box">
+		<div class="connections-answers-container">
+
+			<button class="conncetions-answer" (click)="onSubmit1(1)" [ngClass]="{ 
+					'correct-answer': correctLeftAnswers.includes(1), 'wrong-answer': answered1 && answered2 && wrongLeftAnswers.includes(1)
+				 }" [disabled]="correctLeftAnswers.includes(1) || wrongLeftAnswers.includes(1)">
+				{{ currentQuestion.clipLeft1 }}
+			</button>
+
+			<button class="conncetions-answer" (click)="onSubmit2(1)"
+				[ngClass]="{'correct-answer': correctRightAnswers.includes(1)}"
+				[disabled]="correctRightAnswers.includes(1)">
+				{{ shuffledArray[0] }}
+			</button>
+
+			<button class="conncetions-answer" (click)="onSubmit1(2)" [ngClass]="{ 
+				'correct-answer': correctLeftAnswers.includes(2), 'wrong-answer': answered1 && answered2 && wrongLeftAnswers.includes(2) 
+			 }" [disabled]="correctLeftAnswers.includes(2) || wrongLeftAnswers.includes(2)">
+				{{ currentQuestion.clipLeft2 }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit2(2)"
+				[ngClass]="{'correct-answer': correctRightAnswers.includes(2)}"
+				[disabled]="correctRightAnswers.includes(2)">
+				{{ shuffledArray[1] }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit1(3)" [ngClass]="{ 
+				'correct-answer': correctLeftAnswers.includes(3), 'wrong-answer':   answered1 && answered2 && wrongLeftAnswers.includes(3) 
+			 }" [disabled]="correctLeftAnswers.includes(3) || wrongLeftAnswers.includes(3)">
+				{{ currentQuestion.clipLeft3 }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit2(3)"
+				[ngClass]="{'correct-answer': correctRightAnswers.includes(3)}"
+				[disabled]="correctRightAnswers.includes(3)">
+				{{ shuffledArray[2] }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit1(4)" [ngClass]="{ 
+				'correct-answer': correctLeftAnswers.includes(4), 'wrong-answer':   answered1 && answered2 && wrongLeftAnswers.includes(4)
+			 }" [disabled]="correctLeftAnswers.includes(4) || wrongLeftAnswers.includes(4)">
+				{{ currentQuestion.clipLeft4 }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit2(4)"
+				[ngClass]="{'correct-answer': correctRightAnswers.includes(4)}"
+				[disabled]="correctRightAnswers.includes(4)">
+				{{ shuffledArray[3] }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit1(5)" [ngClass]="{ 
+				'correct-answer': correctLeftAnswers.includes(5), 'wrong-answer':  answered1 && answered2 && wrongLeftAnswers.includes(5) 
+			 }" [disabled]="correctLeftAnswers.includes(5) || wrongLeftAnswers.includes(5)">
+				{{ currentQuestion.clipLeft5 }}</button>
+
+			<button class="conncetions-answer" (click)="onSubmit2(5)"
+				[ngClass]="{'correct-answer': correctRightAnswers.includes(5)}"
+				[disabled]="correctRightAnswers.includes(5)">
+				{{ shuffledArray[4] }}</button>
+		</div>
+	</div>
+	<div class="points-container">
+		<p class="points-text">{{ bodovi }}</p>
+	</div>
+</div>

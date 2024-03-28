@@ -1,0 +1,76 @@
+<form [formGroup]="kvizPostavkeForm">
+  <div class="param-container">
+    <button class="cup-button" [routerLink]="['/rang-tabela']">
+      <p class="stain-text"><i class="fa-solid fa-trophy cup-icon"></i></p>
+    </button>
+    <h2 class="header-top header-options">Postavke kviza</h2>
+    <div class="params">
+      <div class="area-type-params">
+        <div class="name-form-container">
+          <input type="text" value="Ime" class="name-from" formControlName="username" placeholder="Unesite ime" />
+        </div>
+        <div class="area-type-params-container">
+          <div class="area-params">
+            <div class="dropdown-container">
+              <button class="area-header">
+                {{ area ? area.title : "Odaberite oblast" }}
+                <i class="fa-solid fa-caret-down arrow-icon"></i>
+              </button>
+              <div class="dropdown">
+                <a *ngFor="let option of options" (click)="onAreaClick(option)">{{ option.title }}</a>
+              </div>
+            </div>
+
+            <div class="selected-area-container">
+              <p class="selected-aria">
+                {{ area ? area.title : "Odaberite oblast" }}
+              </p>
+            </div>
+            <div class="area-img-container"><img src="{{area ? area.image : '/assets/image.png'}}" /></div>
+          </div>
+          <div class="area-params">
+            <div class="dropdown-container">
+              <button class="area-header">
+                {{ selectedType ? selectedType.name : "Odaberite tip pitanja" }}
+                <i class="fa-solid fa-caret-down arrow-icon"></i>
+              </button>
+              <div class="dropdown">
+                <a *ngFor="let type of questionTypes" (click)="onQuestionTypeClick(type)">{{ type.name }}</a>
+              </div>
+            </div>
+            <div class="selected-area-container">
+              <p class="selected-aria">
+                {{ selectedType ? selectedType.name : "Odaberi pitanja" }}
+              </p>
+            </div>
+            <div class="area-img-container"><img src="{{questionTypeSelected(selectedType?.id)}}"/></div>
+          </div>
+        </div>
+      </div>
+      <div class="mode-container">
+        <p class="mode-header">Težina</p>
+        <div class="mode-buttons">
+          <div class="radio-button-box">
+            <button class="mode-button" (click)="onModeSubmit(1)">
+              <i class="fa-regular fa-star mode-icon icon-green" [ngClass]="{ selected: selectedMode === 1 }"></i>
+            </button>
+          </div>
+          <div class="radio-button-box">
+            <button class="mode-button" (click)="onModeSubmit(2)">
+              <i class="fa-solid fa-star-half-stroke mode-icon icon-orange"
+                [ngClass]="{ selected: selectedMode === 2 }"></i>
+            </button>
+          </div>
+          <div class="radio-button-box">
+            <button class="mode-button" (click)="onModeSubmit(3)">
+              <i class="fa-solid fa-star mode-icon icon-red" [ngClass]="{ selected: selectedMode === 3 }"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="options-button" (click)="onSubmit()" [disabled]="!kvizPostavkeForm.valid">
+      Start
+    </button>
+  </div>
+</form>

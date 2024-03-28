@@ -1,0 +1,94 @@
+<app-header></app-header>
+<form [formGroup]="multipleChoiceForm" (ngSubmit)="onSubmit()">
+	<label for="tekstPitanja">Unesite pitanje:</label> <br>
+	<textarea id="tekstPitanja" name="tekstPitanja" formControlName="tekstPitanja" rows="4" cols="50"
+		placeholder="Unesite pitanje..."></textarea>
+
+	<div class="image-container">
+		<div class="image-input">
+			<label for="imageUrl">Unesite URL slike:</label>
+			<input type="text" id="imageUrl" [(ngModel)]="imageUrl" placeholder="Unesite URL slike:"
+				formControlName="slika">
+		</div>
+		<div *ngIf="imageUrl" class="image">
+			<img src={{imageUrl}} alt="Prikazana slika" />
+		</div>
+	</div>
+
+	<div>
+		<h3>Unesite odgovore i pored označite tačne odgovore (najviše 4):</h3>
+	</div>
+
+
+
+	<div class="field">
+		<label for="odgovor1"> </label>
+		<input type="text" id="odgovor1" name="odgovor1" formControlName="odgovor1" placeholder="Unesite prvi odgovor">
+		<input type="checkbox" name="answer" value="1" formControlName="checkbox1">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor2"></label>
+		<input type="text" id="odgovor2" name="odgovor2" formControlName="odgovor2" placeholder="Unesite drugi odgovor">
+		<input type="checkbox" name="answer" value="2" formControlName="checkbox2">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor3"></label>
+		<input type="text" id="odgovor3" name="odgovor3" formControlName="odgovor3" placeholder="Unesite treći odgovor">
+		<input type="checkbox" name="answer" value="3" formControlName="checkbox3">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor4"></label>
+		<input type="input" id="odgovor4" name="odgovor4" formControlName="odgovor4" placeholder="Unesite četvrti odgovor">
+		<input type="checkbox" name="answer" value="4" formControlName="checkbox4">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor5"></label>
+		<input type="input" id="odgovor5" name="odgovor5" formControlName="odgovor5" placeholder="Unesite peti odgovor">
+		<input type="checkbox" name="answer" value="4" formControlName="checkbox5">
+	</div><br>
+
+	<div class="field">
+		<label for="odgovor6"></label>
+		<input type="input" id="odgovor6" name="odgovor6" formControlName="odgovor6" placeholder="Unesite šesti odgovor">
+		<input type="checkbox" name="answer" value="4" formControlName="checkbox6">
+	</div><br>
+
+	<div class="custom-select">
+		<div><label>Odaberite oblast:</label></div>
+		<div>
+			<select class='select-option' formControlName='areaId'>
+				<option class='option' *ngFor='let option of options' [value]="option.id">{{option.title}}</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="field">
+
+		<label for="mode" class="choose-mode">Odaberite težinu pitanja:</label><br>
+
+		<div class="mode">
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="1"> Lagano
+			</label>
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="2"> Srednje
+			</label>
+
+			<label class="radio">
+				<input type="radio" formControlName="mode" value="3"> Teško
+			</label>
+		</div>
+	</div>
+
+	<div>
+		<button type="submit" [disabled]="!multipleChoiceForm.valid">Pošalji</button>
+	</div>
+</form>
+
+<!-- //(ngModelChange)='onOptionsSelected($event)' -->

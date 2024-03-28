@@ -1,0 +1,146 @@
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  margin: 1rem 0;
+}
+.top-header {
+  background-color: black;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: white;
+  width: 30rem;
+  height: 22rem;
+  margin: 5rem auto;
+  border-radius: 15px 0 15px 0;
+  position: relative;
+  /* border: 1px solid #495057; */
+  box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.204);
+}
+.stain {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  background-color: #0b7285;
+  top: -2.5rem;
+  right: 1rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  rotate: 45deg;
+  box-shadow: 0 7px 3px rgba(0, 0, 0, 0.204);
+}
+.stain-text {
+  background-color: #0b7285;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+.stain-text-bottom{
+  margin-top: -10px;
+}
+.header {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #087f5b;
+  gap: 3rem;
+}
+.header-top {
+  background-color: white;
+  margin-top: 3rem;
+  /* text-transform: uppercase; */
+  font-size: 20px;
+  color: black;
+}
+.header-bottom {
+  font-family: "Sixtyfour", sans-serif;
+  background-color: white;
+  font-size: 64px;
+  /* margin-top: 2rem; */
+  font-weight: bold;
+  color: #0b7285;
+  margin-top: 0.8rem;
+}
+.head-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "Sixtyfour", sans-serif;
+  font-size: 36px;
+  /* margin-top: 3rem; */
+  width: 100%;
+  color: #0e3742;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.8em;
+  outline: none;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #20c997;
+    text-shadow: 0 0 10px #087f5b, 0 0 15px #087f5b, 0 0 30px #087f5b,
+      0 0 50px #087f5b, 0 0 100px #087f5b;
+  }
+}
+.btn-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: white;
+}
+.start {
+  background-color: #0b7285;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  /* border: 2px solid #212529; */
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+}
+.start:hover {
+  background-color: #1098ad;
+}

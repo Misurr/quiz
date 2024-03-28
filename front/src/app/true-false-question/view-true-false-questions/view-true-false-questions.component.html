@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <header>
+	<h2>Tačno - netačno pitanja</h2>
+    <button class="add"> 
+      <i class="icon fas fa-plus"> </i>
+    </button>
+	
+  </header>
+
+  <div *ngFor="let trueFalse of trueFalseQuestionsArray">
+    <ul>
+      <li>
+        {{ trueFalse.question }}
+        <div class="icons">
+          <button><i class="icon edit fas fa-edit"></i></button>
+          <button><i class="icon delete fas fa-trash"></i></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
