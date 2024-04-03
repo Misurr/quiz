@@ -10,7 +10,6 @@ import { NewConnectingQuestionsComponent } from './connecting-questions/new-conn
 import { NewMultipleChoiceQuestionsComponent } from './multiple-choice-question/new-multiple-choice-questions/new-multiple-choice-questions.component';
 import { EditMultipleChoiceQuestionsComponent } from './multiple-choice-question/edit-multiple-choice-questions/edit-multiple-choice-questions.component';
 import { ViewMultipleChoiceQuestionsComponent } from './multiple-choice-question/view-multiple-choice-questions/view-multiple-choice-questions.component';
-import { KvizComponent } from './kviz/kviz.component';
 import { KvizSingleChoiceComponent } from './kviz/kviz-single-choice/kviz-single-choice.component';
 import { KvizStartComponent } from './kviz/kviz-start/kviz-start.component';
 import { KvizPostavkeComponent } from './kviz/kviz-postavke/kviz-postavke.component';
