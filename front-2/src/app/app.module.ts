@@ -20,6 +20,7 @@ import { NewTrueFalseQuestionsComponent } from './quiz-crud/true-false-questions
 import { ViewTrueFalseQuestionsComponent } from './quiz-crud/true-false-questions/view-true-false-questions/view-true-false-questions.component';
 import { HeaderComponent } from './quiz-crud/header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     NewTrueFalseQuestionsComponent,
     ViewTrueFalseQuestionsComponent,
     HeaderComponent,
-    HomepageComponent
+    HomepageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

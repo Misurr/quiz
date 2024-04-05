@@ -1,0 +1,124 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background: #4fd1c4;
+  width: 470px;
+  height: auto;
+  margin: 150px auto;
+  padding: 70px 50px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+}
+
+.form {
+  width: 470px;
+  color: #fffbff;
+}
+
+.input {
+  width: 400px;
+  border: 1px solid #fffbff;
+  border-radius: 20px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background-color: #4fd1c5;
+  padding: 10px 20px;
+  color: #fffbff;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #fffbff;
+}
+
+.checkbox-text {
+  font-size: 15px;
+}
+
+.checkbox-square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fffbff;
+}
+
+.btn {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.create-button {
+  padding: 8px 30px;
+  background-color: #fffbff;
+  color: #01a89e;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.create-button:hover,
+.create-button:focus {
+  color: #01a89e;
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 20px rgba(206, 223, 221, 0.953);
+  border: none;
+}
+.login-button {
+  width: 471px;
+  height: 61px;
+  text-align: center;
+  border: 1px solid #fffbff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background-color: #4fd1c5;
+  padding: 10px 20px;
+  color: #fffbff;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.login-button:focus {
+  color: #fffbff;
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 20px rgba(206, 223, 221, 0.953);
+  border: none;
+}
+
+a {
+  color: #fffbff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input[type="text"] {
+  padding-left: 50px; /* Podešavanje prostora sa leve strane input polja */
+}
+.input-with-icon input[type="password"] {
+  padding-left: 50px;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 10px;
+  top: 43%;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
+i {
+  border: 1px solid #fffbff;
+  border-radius: 100px;
+  padding: 7px;
+}

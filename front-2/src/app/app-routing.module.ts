@@ -16,10 +16,12 @@ import { NewTrueFalseQuestionsComponent } from './quiz-crud/true-false-questions
 import { EditTrueFalseQuestionsComponent } from './quiz-crud/true-false-questions/edit-true-false-questions/edit-true-false-questions.component';
 import { ViewTrueFalseQuestionsComponent } from './quiz-crud/true-false-questions/view-true-false-questions/view-true-false-questions.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'area', component: ViewAreaComponent },
   { path: 'area/:id', component: EditAreaComponent },
   { path: 'create-area', component: NewAreaComponent },
