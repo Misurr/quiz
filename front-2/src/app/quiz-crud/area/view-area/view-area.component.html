@@ -1,1 +1,128 @@
-<p>view-area works!</p>
+<!-- <div id="quiz-areas">
+  <div class="add" routerLink="/create-area">
+    <i class="icon fas fa-plus"> </i>
+  </div>
+  <div class="container">
+    <div class="area-item">
+      <div class="card">
+        <div class="front-card">
+          <img
+            src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/09/12/17/potter.jpg"
+            style="width: 100%"
+          />
+          <div class="content">
+            <h3>Area 1</h3>
+            <p>Area description...</p>
+          </div>
+        </div>
+
+        <div class="back-card">
+          <p>All questions</p>
+          <p>Single-choice questions</p>
+          <p>Multiple-choice questions</p>
+          <p>Connecting questions</p>
+          <p>True - false questions</p>
+
+          <button class="delete-button">
+            <i class="icon delete fas fa-trash"></i>
+          </button>
+          <button class="edit-button">
+            <i class="icon edit fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="front-card">
+          <h3></h3>
+        </div>
+        <div class="back-card">
+          <p></p>
+
+          <button class="delete-button">
+            <i class="icon delete fas fa-trash"></i>
+          </button>
+          <button class="edit-button">
+            <i class="icon edit fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div id="quiz-areas">
+  <div
+    class="add"
+    routerLink="/create-area"
+    (mouseenter)="showTooltip()"
+    (mouseleave)="hideTooltip()"
+  >
+    <i class="icon fas fa-plus"> </i>
+    <div *ngIf="showTooltipFlag" class="tooltip">Add new area</div>
+  </div>
+  <div class="container">
+    <div class="area-item">
+      <div class="card">
+        <div class="front-card">
+          <div class="image-overlay">
+            <img
+              src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/09/12/17/potter.jpg"
+              style="width: 100%"
+            />
+            <div class="content">
+              <h3>Area 1</h3>
+              <p>Area description...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-card">
+          <p>All questions</p>
+          <p>Single-choice questions</p>
+          <p>Multiple-choice questions</p>
+          <p>Connecting questions</p>
+          <p>True - false questions</p>
+
+          <button class="delete-button">
+            <i class="icon delete fas fa-trash"></i>
+          </button>
+          <button class="edit-button">
+            <i class="icon edit fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="front-card">
+          <div class="image-overlay">
+            <img
+              src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/07/23/11/harrypotter.jpg?quality=75&width=640&auto=webp"
+              style="width: 100%"
+            />
+            <div class="content">
+              <h3>Area 1</h3>
+              <p>Area description...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-card">
+          <p>All questions</p>
+          <p>Single-choice questions</p>
+          <p>Multiple-choice questions</p>
+          <p>Connecting questions</p>
+          <p>True - false questions</p>
+
+          <button class="delete-button">
+            <i class="icon delete fas fa-trash"></i>
+          </button>
+          <button class="edit-button">
+            <i class="icon edit fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dodajte više ovakvih kartica po potrebi -->
+    </div>
+  </div>
+</div>

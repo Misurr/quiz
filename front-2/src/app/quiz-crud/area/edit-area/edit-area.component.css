@@ -1,0 +1,127 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background-color: #01a89e;
+  width: 470px;
+  height: auto;
+  margin: 150px auto;
+  padding: 70px 50px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+}
+
+.form {
+  width: 470px;
+  color: #fffbff;
+}
+
+.input {
+  width: 430px;
+  border: 1px solid #fffbff;
+  border-radius: 20px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background-color: #01a89e;
+  padding: 10px 20px;
+  color: #fffbff;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #fffbff;
+}
+
+.second-box {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-text {
+  font-size: 15px;
+}
+
+.checkbox-square {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: #01a89e;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-square:checked {
+  background-color: #01a89e;
+}
+.checkbox-square:checked:after {
+  content: "\2713";
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-square:hover {
+  border-color: lightblue;
+}
+
+.btn {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.create-button {
+  padding: 8px 30px;
+  background-color: #fffbff;
+  color: #01a89e;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.create-button:hover,
+.create-button:focus {
+  color: #01a89e;
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 20px rgba(206, 223, 221, 0.953);
+  border: none;
+}
+.login-button {
+  width: 471px;
+  height: 61px;
+  text-align: center;
+  border: 1px solid #fffbff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background-color: #01a89e;
+  padding: 10px 20px;
+  color: #fffbff;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.login-button:focus {
+  color: #fffbff;
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 20px rgba(206, 223, 221, 0.953);
+  border: none;
+}

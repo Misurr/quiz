@@ -1,1 +1,75 @@
-<p>new-area works!</p>
+<div class="container">
+  <form class="form">
+    <div>
+      <label for="title">Area title:</label><br />
+      <div>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter area title"
+          class="input"
+        /><br />
+      </div>
+    </div>
+
+    <div>
+      <label for="caption">Caption:</label><br />
+      <div>
+        <input
+          type="caption"
+          id="caption"
+          name="caption"
+          placeholder="Enter area caption"
+          class="input"
+        /><br />
+      </div>
+    </div>
+
+    <div>
+      <label for="image-url">Image URL:</label><br />
+      <div>
+        <input
+          type="image-url"
+          id="image-url"
+          name="image-url"
+          placeholder="Enter image URL"
+          class="input"
+        /><br />
+      </div>
+    </div>
+
+    <div class="first-box">
+      <div class="second-box">
+        <div>
+          <input
+            type="checkbox"
+            id="remember"
+            name="remember"
+            value="remember"
+            class="checkbox-square"
+          />
+        </div>
+        <div>
+          <label for="active" class="checkbox-text">Active</label>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        value="SUBMIT"
+        class="login-button"
+        routerLink="/area"
+      >
+        SUBMIT
+      </button>
+    </div>
+
+    <div class="btn">
+      <button type="submit" value="back" class="create-button">CANCEL</button>
+    </div>
+  </form>
+</div>
