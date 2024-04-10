@@ -21,6 +21,7 @@ import { ViewTrueFalseQuestionsComponent } from './quiz-crud/true-false-question
 import { HeaderComponent } from './quiz-crud/header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,13 +43,10 @@ import { LoginComponent } from './login/login.component';
     ViewTrueFalseQuestionsComponent,
     HeaderComponent,
     HomepageComponent,
-    LoginComponent
+    LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

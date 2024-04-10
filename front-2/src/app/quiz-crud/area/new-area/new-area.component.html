@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form">
+  <form class="form" [formGroup]="areaForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="title">Area title:</label><br />
       <div>
@@ -9,33 +9,44 @@
           name="title"
           placeholder="Enter area title"
           class="input"
+          formControlName="areaTitle"
         /><br />
       </div>
     </div>
 
     <div>
       <label for="caption">Caption:</label><br />
-      <div>
-        <input
-          type="caption"
-          id="caption"
-          name="caption"
-          placeholder="Enter area caption"
-          class="input"
-        /><br />
-      </div>
+
+      <textarea
+        id="caption"
+        name="caption"
+        placeholder="Enter area caption..."
+        class="input"
+        formControlName="areaCaption"
+        rows="4"
+        cols="50"
+        style="height: 80px"
+      ></textarea
+      ><br />
     </div>
 
-    <div>
-      <label for="image-url">Image URL:</label><br />
-      <div>
+    <div class="input-image-container">
+      <div class="input-with-image">
+        <label for="image-url">Image URL:</label><br />
         <input
           type="image-url"
           id="image-url"
           name="image-url"
           placeholder="Enter image URL"
-          class="input"
-        /><br />
+          class="input-image-url"
+          formControlName="image"
+        />
+      </div>
+
+      <div class="image">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg"
+        />
       </div>
     </div>
 
@@ -48,6 +59,7 @@
             name="remember"
             value="remember"
             class="checkbox-square"
+            formControlName="activeCheckbox"
           />
         </div>
         <div>
@@ -63,6 +75,7 @@
         value="SUBMIT"
         class="login-button"
         routerLink="/area"
+        [disabled]="!areaForm.valid"
       >
         SUBMIT
       </button>
